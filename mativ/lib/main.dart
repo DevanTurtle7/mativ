@@ -54,6 +54,18 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Draggable(
+              child: Container(
+                width: 100,
+                height: 100,
+                color: Colors.red,
+              ),
+              feedback: Container(
+                width: 100,
+                height: 100,
+                color: Colors.green,
+              ),
+            )
           ],
         ),
       ),
