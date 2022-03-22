@@ -28,13 +28,15 @@ abstract class EquationContainer extends EquationElement {
   }
 
   void addToLeft(EquationContainer left) {
-    _left = left;
+    _left?.setRight(left);
     left.setRight(this);
+    _left = left;
   }
 
   void addToRight(EquationContainer right) {
-    _right = right;
+    _right?.setLeft(right);
     right.setLeft(this);
+    _right = right;
   }
 
   void clearNeighbors() {
