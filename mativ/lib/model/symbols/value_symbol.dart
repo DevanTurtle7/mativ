@@ -4,9 +4,7 @@ import 'package:mativ/model/symbols/equation_symbol.dart';
 class ValueSymbol extends EquationSymbol {
   double _value;
 
-  ValueSymbol(Operator operator, double value) :
-    _value = value,
-    super(operator);
+  ValueSymbol(double value) : _value = value;
 
   double getValue() => _value;
 }
