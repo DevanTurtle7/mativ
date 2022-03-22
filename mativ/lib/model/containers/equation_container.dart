@@ -17,12 +17,27 @@ abstract class EquationContainer extends EquationElement {
         _left = left,
         _right = right,
         super() {
+          setLeft(left);
+          setRight(right);
+  }
+
+  void setLeft(EquationContainer? left) {
+    _left = left;
     _left?.setRight(this);
+  }
+
+  void setRight(EquationContainer? right) {
+    _right = right;
     _right?.setLeft(this);
   }
 
-  void setLeft(EquationContainer? left) => _left = left;
-  void setRight(EquationContainer? right) => _right = right;
+  void clearNeighbors() {
+    _left?.setRight(_right);
+    _right?.setLeft(_left);
+
+    _left = null;
+    _right = null;
+  }
 
   EquationContainer? getLeft() => _left;
   EquationContainer? getRight() => _right;
