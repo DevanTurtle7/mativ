@@ -1,4 +1,3 @@
-import 'package:mativ/model/operators/add.dart';
 import 'package:mativ/model/operators/operator.dart';
 import 'package:mativ/model/symbols/equation_symbol.dart';
 
