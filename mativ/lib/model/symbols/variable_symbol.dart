@@ -1,6 +1,6 @@
 import 'package:mativ/model/operators/operator.dart';
-import 'package:mativ/model/symbols/symbol.dart';
+import 'package:mativ/model/symbols/equation_symbol.dart';
 
-class VariableSymbol extends Symbol {
+class VariableSymbol extends EquationSymbol {
   VariableSymbol(Operator operator) : super(operator);
 }

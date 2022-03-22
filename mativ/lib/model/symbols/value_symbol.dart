@@ -1,7 +1,7 @@
 import 'package:mativ/model/operators/operator.dart';
-import 'package:mativ/model/symbols/symbol.dart';
+import 'package:mativ/model/symbols/equation_symbol.dart';
 
-class ValueSymbol extends Symbol {
+class ValueSymbol extends EquationSymbol {
   int _value;
 
   ValueSymbol(Operator operator, int value) :
