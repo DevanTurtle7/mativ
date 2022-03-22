@@ -1,9 +1,8 @@
+import 'package:mativ/model/operators/operable.dart';
 import 'package:mativ/model/operators/operator.dart';
 
-abstract class EquationSymbol {
-  Operator _operator;
+abstract class EquationSymbol extends Operable {
 
-  EquationSymbol(Operator operator) : _operator = operator;
+  EquationSymbol(Operator operator) : super(operator);
 
-  Operator getOperator() => _operator;
 }
