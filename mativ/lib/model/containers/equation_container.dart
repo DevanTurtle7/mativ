@@ -4,15 +4,13 @@ import '../equation_element.dart';
 
 abstract class EquationContainer extends EquationElement {
   Operator _operator;
-  bool _operatorHidden;
   EquationElement _child;
   EquationContainer? _left;
   EquationContainer? _right;
 
-  EquationContainer(Operator operator, bool operatorHidden,
+  EquationContainer(Operator operator,
       EquationElement child, EquationContainer? left, EquationContainer? right)
       : _operator = operator,
-        _operatorHidden = operatorHidden,
         _child = child,
         _left = left,
         _right = right,
@@ -42,4 +40,16 @@ abstract class EquationContainer extends EquationElement {
   EquationContainer? getLeft() => _left;
   EquationContainer? getRight() => _right;
   Operator getOperator() => _operator;
+
+  bool operatorIsHidden() {
+    // Add constant-variable relationship
+
+    if (_operator == Operator.subtract) {
+      return false;
+    } else if (_left == null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

@@ -6,8 +6,8 @@ void main() {
   ValueSymbol number1 = ValueSymbol(4);
   ValueSymbol number2 = ValueSymbol(1);
 
-  EquationGroup parent = EquationGroup(Operator.add, true, number1, null, null);
-  EquationGroup next = EquationGroup(Operator.subtract, true, number2, parent, null);
+  EquationGroup parent = EquationGroup(Operator.add, number1, null, null);
+  EquationGroup next = EquationGroup(Operator.subtract, number2, parent, null);
 
   print(parent.getRight());
 }
