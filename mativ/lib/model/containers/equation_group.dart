@@ -1,7 +1,8 @@
-import 'package:mativ/model/equation_element.dart';
+import 'package:mativ/model/containers/equation_container.dart';
+import 'package:mativ/model/operators/operator.dart';
 
-class EquationGroup {
-  EquationElement _root;
-
-  EquationGroup(EquationElement root) : _root = root;
+class EquationGroup extends EquationContainer {
+  EquationGroup(
+      Operator operator, EquationContainer? left, EquationContainer? right)
+      : super(operator, left, right);
 }
