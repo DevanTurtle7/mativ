@@ -10,4 +10,10 @@ abstract class EquationContainer extends Operable {
       : _left = left,
         _right = right,
         super(operator);
+
+    void setLeft(EquationContainer? left) => _left = left;
+    void setRight(EquationContainer? right) => _right = right;
+
+    EquationContainer? getLeft() => _left;
+    EquationContainer? getRight() => _right;
 }
