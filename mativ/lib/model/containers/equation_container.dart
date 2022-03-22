@@ -8,10 +8,15 @@ abstract class EquationContainer extends EquationElement {
   EquationContainer? _left;
   EquationContainer? _right;
 
-  EquationContainer(this._operator, this._child, this._left, this._right)
-      : super() {
-        _left?.addToRight(this);
-        _right?.addToLeft(this);
+  EquationContainer(Operator operator, EquationElement child,
+      EquationContainer? left, EquationContainer? right)
+      : _operator = operator,
+        _child = child,
+        _left = left,
+        _right = right,
+        super() {
+    left?.addToRight(this);
+    right?.addToLeft(this);
   }
 
   void setLeft(EquationContainer? left) {
