@@ -8,4 +8,6 @@ void main() {
 
   EquationGroup parent = EquationGroup(Operator.add, true, number1, null, null);
   EquationGroup next = EquationGroup(Operator.subtract, true, number2, parent, null);
+
+  print(parent.getRight());
 }
